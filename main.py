@@ -1,11 +1,5 @@
 """
-ONDERDEEL 3: SCHERM EN SPELLOGICA
---------------------------------------------
-Bouwt het venster op (knoppen, labels, canvas) en regelt de spelflow:
-wat er gebeurt als je op een letter klikt, wanneer je wint/verliest,
-en wanneer je naar het volgende niveau gaat.
-
-Gebruikt de functies uit data.py (woorden) en tekenen.py (de galg).
+Dit is de main waar alles wordt toegevoegd van de coden
 """
 
 import tkinter as tk

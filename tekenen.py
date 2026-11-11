@@ -1,15 +1,7 @@
-"""
-ONDERDEEL 2: TEKENEN VAN DE GALG
---------------------------------------------
-Alles wat met de tekening op het canvas te maken heeft.
-Dit bestand weet niks van woorden of spellogica -- het krijgt gewoon
-een canvas en een aantal fouten, en tekent daar de galg op.
-"""
-
 # Elk item hieronder tekent 1 lichaamsdeel: (x1, y1, x2, y2).
 # Bij bijvoorbeeld 3 fouten pakken we gewoon de eerste 3 items uit dit lijstje.
 LICHAAMSDELEN = [
-    (120, 45, 160, 85),    # 1. hoofd  (ovaal)
+    (120, 45, 160, 85),    # 1. hoofd
     (140, 85, 140, 140),   # 2. lijf   (lijn)
     (140, 95, 115, 120),   # 3. linkerarm
     (140, 95, 165, 120),   # 4. rechterarm
@@ -20,7 +12,7 @@ MAX_FOUTEN = len(LICHAAMSDELEN)
 
 
 def teken_galg(canvas, fouten):
-    """Tekent de galgconstructie plus zoveel lichaamsdelen als er fouten zijn."""
+    """Dit Tekent de galgconstructie plus zoveel lichaamsdelen als er fouten zijn."""
     canvas.delete("all")
 
     # De houten constructie staat er altijd
@@ -32,13 +24,13 @@ def teken_galg(canvas, fouten):
     # Lichaamsdelen die horen bij het huidige aantal fouten
     for i, deel in enumerate(LICHAAMSDELEN[:fouten]):
         if i == 0:
-            canvas.create_oval(*deel, width=3)   # het hoofd is een ovaal
+            canvas.create_oval(*deel, width=3)   #het hoofd is een ovaal
         else:
             canvas.create_line(*deel, width=3)   # de rest zijn lijnen
 
 
 def teken_eindscherm(canvas):
-    """Vervangt de tekening door een felicitatie als alle niveaus zijn gehaald."""
+
     canvas.delete("all")
     canvas.create_text(
         110, 110,
@@ -47,3 +39,5 @@ def teken_eindscherm(canvas):
         fill="green",
         justify="center"
     )
+    """je ziet 
+    Een felicitatie als alle niveaus zijn gehaald."""
